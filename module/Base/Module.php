@@ -32,6 +32,20 @@ class Module
     }					
     public function onBootstrap($e)
     {
+       
+        $e->getApplication()->getEventManager()->attach('render', function($e) {
+        	/*
+    		 * title's
+    		 */
+            $matches    = $e->getRouteMatch()->getMatchedRouteName();
+    		$viewHelperManager = $e->getApplication()->getServiceManager()->get('viewHelperManager');
+    		$headTitleHelper   = $viewHelperManager->get('headTitle');
+    		$siteName   = 'Café Seleto';
+    		$headTitleHelper->setSeparator(' - ');
+    		$headTitleHelper->append($siteName);
+    		if($matches == "home") $headTitleHelper->append("Pagina Inicial");
+        }, 100);
+        
     	$e->getApplication()->getEventManager()->getSharedManager()->attach('Zend\Mvc\Controller\AbstractActionController', 'dispatch', function($e) {
     		/*
     		 * Definições de sessoes
@@ -98,15 +112,7 @@ class Module
     				}
     			}
     		}
-    		/*
-    		 * title's
-    		 */
-    		$viewHelperManager = $e->getApplication()->getServiceManager()->get('viewHelperManager');
-    		$headTitleHelper   = $viewHelperManager->get('headTitle');
-    		$siteName   = 'Café Seleto';
-    		$headTitleHelper->setSeparator(' - ');
-    		$headTitleHelper->append($siteName);
-    		if($matchedRoute == "home") $headTitleHelper->append("Pagina Inicial");
+    		
     		/*
     		 * Carrinho de compras Session
     		 */
