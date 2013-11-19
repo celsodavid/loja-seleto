@@ -13,7 +13,7 @@ class Module
     	$sharedEventManager = $eventManager->getSharedManager();
         /*
     	$sharedEventManager->attach('Pagamento\Service\Recibo', 'insert', function($e) {
-    	    $e->getTarget()->setDereckleme("Dereck vicentin leme");
+    	    
     	}, 100);
     	*/
     }

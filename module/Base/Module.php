@@ -99,6 +99,15 @@ class Module
     			}
     		}
     		/*
+    		 * title's
+    		 */
+    		$viewHelperManager = $e->getApplication()->getServiceManager()->get('viewHelperManager');
+    		$headTitleHelper   = $viewHelperManager->get('headTitle');
+    		$siteName   = 'Café Seleto';
+    		$headTitleHelper->setSeparator(' - ');
+    		$headTitleHelper->append($siteName);
+    		if($matchedRoute == "home") $headTitleHelper->append("Pagina Inicial");
+    		/*
     		 * Carrinho de compras Session
     		 */
     		
