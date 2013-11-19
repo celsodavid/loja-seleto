@@ -108,20 +108,19 @@ $(document).ready(function(){
 					}
 						else
 							{
-							$(".erro").html("Alguns campos abaixo estão em branco:");
-							$(".tipo_erro").html("");
-							$(".tentarNovamente").css("display","block");
+							var msg = "Alguns campos abaixo estão em branco:\n";
+							
 							$(".formActionResquest input,select").each(function( index,element ) {
 								if($(element).val() == "")
 									{
-										if(index == 0) $(".tipo_erro").append("<Br/> - Número do CEP");
-										if(index == 1) $(".tipo_erro").append("<Br/> - Endereço de entrega");
-										if(index == 2) $(".tipo_erro").append("<Br/> - Número");
-										if(index == 3) $(".tipo_erro").append("<Br/> - Bairro");
-										if(index == 4) $(".tipo_erro").append("<Br/> - Cidade");
+										if(index == 0) msg = msg+"\n- Número do CEP";
+										if(index == 1) msg = msg+"\n- Endereço de entrega";
+										if(index == 2) msg = msg+"\n- Número";
+										if(index == 3) msg = msg+"\n- Bairro";
+										if(index == 4) msg = msg+"\n- Cidade";
 									}
 							});
-							$("#form_erro").fadeIn();
+							alert(msg);
 							}
 					return false;
 				});
@@ -241,8 +240,9 @@ $(document).ready(function(){
 		$.ajax({
 			  url: basePatch+"/api/Cadastro/"+id,
 			  type: 'DELETE',
-			  success: function(data) {alert(data)},
+			  success: function(data) {},
 			  beforeSend:function(){
+				  $(".modelNotificacao").attr("id","modelSucesso");
 					$(".atencaoErro").html("Endereço de entrega.");
 					$(".erro").html("");
 					$(".tentarNovamente").css("display","none");
@@ -380,6 +380,7 @@ $(document).ready(function(){
 					type: "post",
 					data: {cep:cepSet},
 					beforeSend:function(){
+						$(".modelNotificacao").attr("id","atualizando_dados");
 						$(".atencaoErro").html("Selecione um endereço de entrega.");
 						$(".erro").html("");
 						$(".tentarNovamente").css("display","none");
