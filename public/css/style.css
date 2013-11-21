@@ -743,7 +743,7 @@ p.TituloEnderecoResidencial { font-size: 16px; color: #666666; margin-left: 15px
 span.DetalheEnderecoResidencial { font-size: 13px; font-weight: normal;}
 span.EditarDados { color: #FFF; float:left; border: none; padding: 10px; cursor: pointer; letter-spacing: 1px; border-radius: 7px; background: #582700; text-transform: uppercase; margin-top: 5px;}
 span.EditarDados:hover { background: #351903;}
-#MeusDados { width: 333px; float: left; padding-bottom: 10px; margin: 30px 0 30px 100px;}
+#MeusDados { width: 333px; float: left; padding-bottom: 10px; margin: 30px 0 30px 100px; }
 #MeuEndereco { width: 333px; float: right; padding-bottom: 10px; margin: 30px 100px 30px 0;}
 
 /*p.NameMeusDados { font-size: 16px; color: #666666; font-weight: bold; margin-left: 15px; margin-top: 10px;}
@@ -818,6 +818,8 @@ span.ButtonVoltar { float: left; border-radius: 5px; -moz-border-radius: 5px; -w
 span.ButtonVoltar:hover { background: #351903;}
 span.ButtonRastrearCompra { float: right; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; font-size: 14px; border: none; color: #FFF; text-transform: uppercase; background: #ff7f25; padding: 10px; margin-top: 10px;}
 span.ButtonRastrearCompra:hover { background: #E76509;}
+
+#BoxDetalheDoPedido center{color:#ff7f25; font-weight: 700; font-size: 24px; margin-top: 13px}
 /*Fim da Pagina de Detalhes do Pedido*/
 
 
@@ -894,7 +896,7 @@ input.LimparFormInst:hover { background: #351903;}
 
 /*quantidade estoque*/
 
-.smsEstoque{padding: 10px; text-align: center; color:#fff; background:red;font-size: 14px; letter-spacing: 1px;}
+.smsEstoque{padding: 10px; text-align: center; color:red; ;font-size: 14px; letter-spacing: 1px;}
 .smsEstoqueVejaMais {padding: 3px; color:#fff; background: red; font-size: 12px;letter-spacing: normal;}
 
 /* Hack Chorme */
