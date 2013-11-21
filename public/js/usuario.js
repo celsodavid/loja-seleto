@@ -89,7 +89,7 @@ $(document).ready(function(){
 							data: {actionCep:actionCep,actionRua:actionRua,actionNumero:actionNumero,actionBairro:actionBairro,actionCidade:actionCidade},
 							success: function(data) {
 								$(".modelNotificacao").attr("id","modelSucesso");
-								$(".erro").html("Parabéns você adicionou um endereço alternativo:"); // texto de erro
+								$(".erro").html("Adicionamos seu endere�o alternativo com sucesso:"); // texto de erro
 								$(".tentarNovamente").html("Continuar");
 								$("#form_erro").fadeIn();
 								$(".tentarNovamente").on("click",function(){
