@@ -230,9 +230,8 @@ $(document).ready(function(){
 			  beforeSend:function(){
 				  $(".modelNotificacao").attr("id","modelSucesso");
 					$(".atencaoErro").html("Endereço de entrega.");
-					$(".erro").html("");
+					$(".erro").html("Estamos removendo o endereço selecionado:");
 					$(".tentarNovamente").css("display","none");
-					$(".tipo_erro").html("Estamos removendo o endereço selecionado.");
 					$("#form_erro").fadeIn();
 				},
 				complete:function(){
