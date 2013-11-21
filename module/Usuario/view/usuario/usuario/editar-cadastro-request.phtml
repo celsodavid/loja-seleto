@@ -4,7 +4,7 @@
                 	<div id="recebimento">
                 		<img class="atencaoform" src="<?=$this->basePath()?>/images/atencaoEditar.png">
 							<form class="formActionResquest">
-					                  <label class="FormCEP">CEP*:</label><br/><input type="text" class="BoxCEPResquest" value="<?if(method_exists($this->data,'getCep')) print $this->data->getCep();?>"><br/><br/>
+					                  <label class="FormCEP">CEP*:</label><br/><input type="text" class="BoxCEPResquest" value="<?if(method_exists($this->data,'getCep')) print $this->data->getCep();?>"><span class="ajaxMsg" style="color:#ff7f25;display:none;font-weight:bold"></span><br/><br/>
 					                  <label class="FormEndereco">Endereço*:</label><br/><input type="text" class="BoxEnderecoResquest" value="<?if(method_exists($this->data,'getRua')) print $this->data->getRua()?>"><br/><p class="texto_info">(Deverá ser informado se o endereço é Rua/Avenida/
 Quadra/Estrada/Praça e na sequência o nome do endereço)</p><br/>
 
