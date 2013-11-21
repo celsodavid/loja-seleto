@@ -1,4 +1,4 @@
-
+ 
 @font-face {
   font-family: 'Conv_georgia';
   src: url('../fonts/georgia.eot');
@@ -128,6 +128,12 @@ a.tentarNovamente:hover {background: #bf1618}
 #atualizando_dados span.tipo_erro{ line-height: 25px; color:#000;}
 #atualizando_dados a.tentarNovamente {background: #ffae00; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px}
 #atualizando_dados a.tentarNovamente:hover {background: #d79303}
+
+#modelSucesso {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #5b9000;  text-align: center; padding-bottom: 30px }
+#modelSucesso .atencaoErro {background:url(../images/parabens.png) no-repeat ; text-indent: -9999px; height:36px; width: 36px; margin-left: 185px}
+#modelSucesso span.tipo_erro{ line-height: 25px; color:#000;}
+#modelSucesso a.tentarNovamente {background: #5b9000; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px}
+#modelSucesso a.tentarNovamente:hover {background: #456d01}
 
 
 /*
@@ -684,22 +690,22 @@ p.txt_ResultadoNEncontrado em {font-weight: bolder; color:#333;}
 
 #PaginaDoUsuario { width: 1024px; float: left;}
 #MenuDoUsuario { width: 1024px; float: left;}
-#BoxPaginaDoUsuario { width: 1020px; border: solid 2px #ff7f25; float: left; margin-bottom: 12px;}
-ul.BoxMenuDoUsuario { width: 1024px; height: 51px; margin: 0 auto;}
+#BoxPaginaDoUsuario { width: 1020px; border: solid 1px #ddd; float: left; margin-bottom: 12px; margin-top: 5px}
+ul.BoxMenuDoUsuario { width: 1024px; height: 76px; margin: 0 auto;}
 li.BoxMenuDoUsuario { float: left;}
 
 
-ul.BoxMenuDoUsuario li a.MeusDados { width: 341px; height:51px; background: url(../images/tt_MeusDadosHover.png) no-repeat; float: left; text-indent: -9999px;}
-ul.BoxMenuDoUsuario li a.EndEntrega { width: 341px; height:51px; background: url(../images/tt_MeuEnderecoHover.png) no-repeat; float: left; text-indent: -9999px;}
-ul.BoxMenuDoUsuario li a.SeuPedido { width: 342px; height:51px; background: url(../images/AcompanhePedidoHover.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.MeusDados { width: 280px; height:76px; background: url(../images/tt_MeusDadosHover.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.EndEntrega { width: 341px; height:76px; background: url(../images/tt_MeuEnderecoHover.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.SeuPedido { width: 400px; height:76px; background: url(../images/AcompanhePedidoHover.png) no-repeat; float: left; text-indent: -9999px;}
 
 ul.BoxMenuDoUsuario li a.MeusDados:hover { background: url(../images/tt_MeusDados.png) no-repeat;}
 ul.BoxMenuDoUsuario li a.EndEntrega:hover { background: url(../images/tt_MeuEndereco.png) no-repeat;}
 ul.BoxMenuDoUsuario li a.SeuPedido:hover { background: url(../images/AcompanhePedido.png) no-repeat;}
 
-ul.BoxMenuDoUsuario li a.MeusDadosActive { width: 341px; height:51px; background: url(../images/tt_MeusDados.png) no-repeat; float: left; text-indent: -9999px;}
-ul.BoxMenuDoUsuario li a.EndEntregaActive { width: 341px; height:51px; background: url(../images/tt_MeuEndereco.png) no-repeat; float: left; text-indent: -9999px;}
-ul.BoxMenuDoUsuario li a.SeuPedidoActive { width: 342px; height:51px; background: url(../images/AcompanhePedido.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.MeusDadosActive { width: 280px; height:76px; background: url(../images/tt_MeusDados.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.EndEntregaActive { width: 341px; height:76px; background: url(../images/tt_MeuEndereco.png) no-repeat; float: left; text-indent: -9999px;}
+ul.BoxMenuDoUsuario li a.SeuPedidoActive { width: 400px; height:76px; background: url(../images/AcompanhePedido.png) no-repeat; float: left; text-indent: -9999px;}
 
 
 
