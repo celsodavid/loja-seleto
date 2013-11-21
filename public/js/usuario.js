@@ -528,24 +528,14 @@ $(document).ready(function(){
 												location.reload();
 											});
 										}
-										else
-										{
-											$("#Login_Cadastro").animate({left:"+=15"}, 50,function(){
-												$(this).animate({left:"-=30"}, 50,function(){
-													$(this).animate({left:"+=15"}, 50,function(){
-														$(".tipo_erro").html(data);
-														$("#form_erro").fadeIn();
-													});
-												});
-											});
-											
-										}
 							},
 							error: function(){}
 						});
 						}
 					else
 						{
+						$(".modelNotificacao").attr("id","atencao_erro");
+						$(".tentarNovamente").html("Tentar Novamente");
 							$("#Login_Cadastro").animate({left:"+=15"}, 50,function(){
 								$(this).animate({left:"-=30"}, 50,function(){
 									$(this).animate({left:"+=15"}, 50,function(){
@@ -626,6 +616,8 @@ $(document).ready(function(){
 						}
 						else
 						{
+							$(".modelNotificacao").attr("id","atencao_erro");
+							$(".tentarNovamente").html("Tentar Novamente");
 							$("#Login_Cadastro").animate({left:"+=15"}, 50,function(){
 								$(this).animate({left:"-=30"}, 50,function(){
 									$(this).animate({left:"+=15"}, 50,function(){
