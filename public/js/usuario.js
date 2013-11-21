@@ -16,15 +16,9 @@ $(document).ready(function(){
 						url: basePatch+"/correios/restCep",
 						type: "post",
 						beforeSend: function(){
-								$(".atencaoErro").html("Aguarde um momento.");
-								$(".erro").html("");
-								$(".tentarNovamente").css("display","none");
-								$(".tipo_erro").html("Localizando endereço do cep: "+cepSet);
-								$("#form_erro").fadeIn();
-						   },
-						complete:function(){
-							$("#form_erro").fadeOut();
-						},   
+							$(".ajaxMsg").html("<img src='"+basePatch+"/images/487.GIF'/> "+" Localizando endereço");
+							$(".ajaxMsg").fadeIn();
+						   },   
 						data: {cep:cepSet},
 						success: function(data) {
 							$(".ajaxMsg").fadeOut();
@@ -94,11 +88,9 @@ $(document).ready(function(){
 							async:false,
 							data: {actionCep:actionCep,actionRua:actionRua,actionNumero:actionNumero,actionBairro:actionBairro,actionCidade:actionCidade},
 							success: function(data) {
-								$(".atencaoErro").html("Selecione um endereço de entrega.");
-								$(".erro").html("");
-								$(".tentarNovamente").css("display","block");
-								$(".tentarNovamente").html("Continuar compra");
-								$(".tipo_erro").html("Parabéns você adicionou um endereço alternativo.");
+								$(".modelNotificacao").attr("id","modelSucesso");
+								$(".erro").html("Parabéns você adicionou um endereço alternativo:"); // texto de erro
+								$(".tentarNovamente").html("Continuar");
 								$("#form_erro").fadeIn();
 								$(".tentarNovamente").on("click",function(){
 									location.reload();
@@ -145,15 +137,9 @@ $(document).ready(function(){
 						url: basePatch+"/correios/restCep",
 						type: "post",
 						beforeSend: function(){
-								$(".atencaoErro").html("Aguarde um momento.");
-								$(".erro").html("");
-								$(".tentarNovamente").css("display","none");
-								$(".tipo_erro").html("Localizando endereço do cep: "+cepSet);
-								$("#form_erro").fadeIn();
-						   },
-						complete:function(){
-							$("#form_erro").fadeOut();
-						},   
+							$(".ajaxMsg").html("<img src='"+basePatch+"/images/487.GIF'/> "+" Localizando endereço");
+							$(".ajaxMsg").fadeIn();
+						   },  
 						data: {cep:cepSet},
 						success: function(data) {
 							$(".ajaxMsg").fadeOut();
@@ -284,6 +270,7 @@ $(document).ready(function(){
 					}
 				else
 					{
+						$(".tipo_erro").html("");
 						$(".modelNotificacao").attr("id","modelSucesso");
 						$(".erro").html("Seus dados pessoais foram atualizado com sucesso:");
 						$(".tentarNovamente").html("Continuar");
@@ -322,6 +309,7 @@ $(document).ready(function(){
 						$("#form_erro").fadeIn();
 					}
 				else{
+						$(".tipo_erro").html("");
 						$(".modelNotificacao").attr("id","modelSucesso");
 						$(".erro").html("Seu endereço foi salvo com sucesso:");
 						$(".tentarNovamente").html("Continuar");
