@@ -89,7 +89,7 @@ $(document).ready(function(){
 							data: {actionCep:actionCep,actionRua:actionRua,actionNumero:actionNumero,actionBairro:actionBairro,actionCidade:actionCidade},
 							success: function(data) {
 								$(".modelNotificacao").attr("id","modelSucesso");
-								$(".erro").html("Adicionamos seu endere�o alternativo com sucesso:"); // texto de erro
+								$(".erro").html("Adicionamos seu endereço alternativo com sucesso:"); // texto de erro
 								$(".tentarNovamente").html("Continuar");
 								$("#form_erro").fadeIn();
 								$(".tentarNovamente").on("click",function(){
@@ -105,9 +105,9 @@ $(document).ready(function(){
 							$(".formActionResquest input,select").each(function( index,element ) {
 								if($(element).val() == "")
 									{
-										if(index == 0) msg = msg+"\n- Número do CEP";
+										if(index == 0) msg = msg+"\n- Numero do CEP";
 										if(index == 1) msg = msg+"\n- Endereço de entrega";
-										if(index == 2) msg = msg+"\n- Número";
+										if(index == 2) msg = msg+"\n- Numero";
 										if(index == 3) msg = msg+"\n- Bairro";
 										if(index == 4) msg = msg+"\n- Cidade";
 									}
@@ -695,9 +695,9 @@ $(document).ready(function(){
 				$(".formAction input,select").each(function( index,element ) {
 					if($(element).val() == "")
 						{
-							if(index == 0) $(".tipo_erro").append("<Br/> - Número do CEP");
+							if(index == 0) $(".tipo_erro").append("<Br/> - NÃºmero do CEP");
 							if(index == 1) $(".tipo_erro").append("<Br/> - Endereço de entrega");
-							if(index == 2) $(".tipo_erro").append("<Br/> - Número");
+							if(index == 2) $(".tipo_erro").append("<Br/> - NÃºmero");
 							if(index == 3) $(".tipo_erro").append("<Br/> - Bairro");
 							if(index == 4) $(".tipo_erro").append("<Br/> - Cidade");
 						}
