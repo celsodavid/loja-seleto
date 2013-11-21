@@ -275,9 +275,18 @@ $(document).ready(function(){
 			success: function(data) {
 				if(data != "")
 					{
+					$(".modelNotificacao").attr("id","atencao_erro");
 						$(".erro").html("Alguns campos abaixo estão em branco:");
 						$(".tipo_erro").html("");
 						$(".tipo_erro").html(data);
+						$(".tentarNovamente").html("Tentar Novamente");
+						$("#form_erro").fadeIn();
+					}
+				else
+					{
+						$(".modelNotificacao").attr("id","modelSucesso");
+						$(".erro").html("Seus dados pessoais foram atualizado com sucesso:");
+						$(".tentarNovamente").html("Continuar");
 						$("#form_erro").fadeIn();
 					}
 			}
@@ -305,15 +314,26 @@ $(document).ready(function(){
 			success: function(data) {
 				if(data != "")
 					{
+						$(".modelNotificacao").attr("id","atencao_erro");
 						$(".erro").html("Alguns campos abaixo estão em branco:");
 						$(".tipo_erro").html("");
 						$(".tipo_erro").html(data);
+						$(".tentarNovamente").html("Tentar Novamente");
 						$("#form_erro").fadeIn();
 					}
 				else{
-						location.reload();
+						$(".modelNotificacao").attr("id","modelSucesso");
+						$(".erro").html("Seu endereço foi salvo com sucesso:");
+						$(".tentarNovamente").html("Continuar");
+						$("#form_erro").fadeIn();
 					}
-			}
+			},
+			complete:function(){
+				$(".tentarNovamente").html("Continuar").fadeIn();
+				$(".tentarNovamente").on("click",function(){
+					location.reload();
+				})
+			},
 		});
 		return false;
 	})
@@ -339,9 +359,18 @@ $(document).ready(function(){
 						$("#form_erro").fadeIn();
 					}
 				else{
-						location.reload();
+						$(".modelNotificacao").attr("id","modelSucesso");
+						$(".erro").html("Seu endereço foi salvo com sucesso:");
+						$(".tentarNovamente").html("Continuar");
+						$("#form_erro").fadeIn();
 					}
-			}
+			},
+			complete:function(){
+				$(".tentarNovamente").html("Continuar").fadeIn();
+				$(".tentarNovamente").on("click",function(){
+					location.reload();
+				})
+			},	
 		});
 		return false;
 	})
@@ -659,23 +688,23 @@ $(document).ready(function(){
 				async:false,
 				data: {actionCep:actionCep,actionRua:actionRua,actionNumero:actionNumero,actionBairro:actionBairro,actionCidade:actionCidade},
 				success: function(data) {
-					$(".atencaoErro").html("Selecione um endereço de entrega.");
-					$(".erro").html("");
-					$(".tentarNovamente").css("display","block");
-					$(".tentarNovamente").html("Continuar compra");
-					$(".tipo_erro").html("Parabéns você adicionou um endereço alternativo.");
+					$(".modelNotificacao").attr("id","modelSucesso");
+					$(".erro").html("Endereço alternativo salvo com sucesso:");
+					$(".tentarNovamente").html("Continuar");
 					$("#form_erro").fadeIn();
+				},
+				complete:function(){
 					$(".tentarNovamente").on("click",function(){
 						location.reload();
 					})
-				}
+				},
 			});
 		}
 			else
 				{
+				$(".modelNotificacao").attr("id","atencao_erro");
 				$(".erro").html("Alguns campos abaixo estão em branco:");
-				$(".tipo_erro").html("");
-				$(".tentarNovamente").css("display","block");
+				$(".tentarNovamente").html("Tentar Novamente");
 				$(".formAction input,select").each(function( index,element ) {
 					if($(element).val() == "")
 						{
@@ -702,18 +731,11 @@ $(document).ready(function(){
 			url: basePatch+"/correios/restCep",
 			type: "post",
 			beforeSend: function(){
-					$(".atencaoErro").html("Aguarde um momento.");
-					$(".erro").html("");
-					$(".tentarNovamente").css("display","none");
-					$(".tipo_erro").html("Localizando endereço do cep: "+cepSet);
-					$("#form_erro").fadeIn();
-			   },
-			complete:function(){
-				$("#form_erro").fadeOut();
-			},   
+					$(".ajaxMsg").html("<img src='"+basePatch+"/images/487.GIF'/> "+" Localizando endereço");
+					$(".ajaxMsg").fadeIn();
+			   },  
 			data: {cep:cepSet},
 			success: function(data) {
-				$(".ajaxMsg").fadeOut();
 				obj = JSON.parse(data);
 				if(obj.cep == null)
 				{
@@ -727,6 +749,7 @@ $(document).ready(function(){
 				}
 				else
 					{
+						$(".ajaxMsg").fadeOut();
 						$(".BoxEndereco").val(obj.rua);
 						$(".BoxBairro").val(obj.bairro);
 						jQuery.each($(".BoxEstado option"), function(i, val) {

@@ -80,7 +80,7 @@
                       <p class="ttBoxLogin">*Todos os campos são obrigatórios</p></br>
 						<form action="" class="formAction">
 						    <input type="hidden" value="zzz"/>
-					      <label class="FormCEP">CEP*:</label><br/><input type="text" class="BoxCEP" <?if($offValue) print 'disabled="disabled"'?> value="<?=$this->cadastro->getCep()?>"><br/><br/>
+					      <label class="FormCEP">CEP*:</label><br/><input type="text" class="BoxCEP" <?if($offValue) print 'disabled="disabled"'?> value="<?=$this->cadastro->getCep()?>"><span class="ajaxMsg" style="color:#ff7f25;display:none;font-weight:bold"></span><br/><br/>
 					       <label class="FormEndereco">Endereço*:</label><br/><input type="text" class="BoxEndereco" <?if($offValue) print 'disabled="disabled"'?> value="<?=$this->cadastro->getRua()?>"><br/><p class="xxx">(Deverá ser informado se o endereço é Rua/Avenida/
                                       Quadra/Estrada/Praça e na sequência o nome do endereço)</p><br/>
 					         <label class="FormNumero">Numero*:</label>           
@@ -186,7 +186,8 @@
 				else
 				{
 					?>
-					        <center>Seu endereço está incompleto.</center>
+					   
+					        <center>Seu endereço está incompleto, Clique em <a href="" class="MeusDados">Meus Dados</a> para concluír seu cadastro.</center>
 					<?php
 				}
 					?>
@@ -216,6 +217,16 @@
 
 			<!--PEDIDOS-->
 				<div id="BoxDetalheDoPedido">
+				<?php 
+				    if(count($this->recibos) == 0)
+				    {
+				    	?>
+				    	    <center>Você no momento não tem novos pedidos:</center>
+				    	<?php
+				    }
+				    else 
+				    {
+				?>
 					<p class="txtAvisoPedido">*Clique no número do pedido para mais informações:</p>
 					<?php     
 					    foreach($this->recibos AS $recibo)
@@ -301,7 +312,9 @@
 						</ul>
 				
 <?php 
-					    }	    
+					    }
+				 }  
+				 	    
 ?>
 				</div>
 

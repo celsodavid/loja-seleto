@@ -211,7 +211,7 @@ if(!empty($this->nomeCompleto) && !empty($this->cep) && !empty($this->endereco) 
                                    
 									<form action="" class="formAction">
 
-					                  <label class="FormCEP">CEP*:</label><br/><input  type="text" class="BoxCEP"><br/><br/>
+					                  <label class="FormCEP">CEP*:</label><br/><input  type="text" class="BoxCEP"><span class="ajaxMsg" style="color:#ff7f25;display:none;font-weight:bold"></span><br/><br/>
 					                  
 
 					                  <label class="FormEndereco">Endereço*:</label><br/><input   type="text" class="BoxEndereco" value=""><br/><p class="xxx">(Deverá ser informado se o endereço é Rua/Avenida/
@@ -262,7 +262,7 @@ Quadra/Estrada/Praça e na sequência o nome do endereço)</p><br/>
 					 <input type="text" class="InscEstadual" value="<?=$this->cadastro->getInscricaoEstadual()?>"><br/><p class="xxx">(Informe o Numero da Inscrição Estadual)</p><br/>
                         </div>
 
-					                  <label class="FormCEP">CEP*:</label><br/><input type="text" <?if($offValue) print 'disabled="disabled"'?> class="BoxCEP" value="<?=$this->cep?>"><span class="ajaxMsg" style="color:red;display:none"></span><br/><br/>
+					                  <label class="FormCEP">CEP*:</label><br/><input type="text" <?if($offValue) print 'disabled="disabled"'?> class="BoxCEP" value="<?=$this->cep?>"><span class="ajaxMsg" style="color:#ff7f25;display:none;font-weight:bold"></span><br/><br/>
 					                  
 
 					                  <label class="FormEndereco">Endereço*:</label><br/><input <?if($offValue) print 'disabled="disabled"'?> type="text" class="BoxEndereco" value="<?=$this->endereco?>"><br/><p class="xxx">(Deverá ser informado se o endereço é Rua/Avenida/
