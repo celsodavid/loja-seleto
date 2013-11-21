@@ -115,24 +115,25 @@ li.ButtonFinalizarCompra a:hover { background: #e76509;}
 
 #form_erro {width: 100%; min-width: 1024px; height:100%; position: fixed; left:0px; top:0px; z-index: 9999; background: url(../images/fundo_form.png); }
 #BoxFormErro { width: 100%; min-width: 1024px; position:fixed; top:30%; }
-#atencao_erro {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #e22123;  text-align: center; padding-bottom: 30px }
+#atencao_erro {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #e22123;  text-align: center; padding-bottom: 70px }
 
 p.atencaoErro {background:url(../images/atencaoErro.png) no-repeat ; text-indent: -9999px; height:95px; margin-left:76px;}
 p.erro{font-weight: bold; font-size: 16px; color:#000;}
 span.tipo_erro{ line-height: 25px; color:#000;}
-a.tentarNovamente {background: #e22123; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px}
+a.tentarNovamente {float:left; background: #e22123; border-radius: 7px; padding: 10px;  text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px; margin-left: 125px; margin-top: 15px }
 a.tentarNovamente:hover {background: #bf1618}
 
-#atualizando_dados {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #ffae00;  text-align: center; padding-bottom: 30px }
+#atualizando_dados {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #ffae00;  text-align: center; padding-bottom: 70px }
 #atualizando_dados p.atencaoErro {background:url(../images/atualizandoDados.png) no-repeat ; text-indent: -9999px; height:69px; margin-left:105px;}
 #atualizando_dados span.tipo_erro{ line-height: 25px; color:#000;}
-#atualizando_dados a.tentarNovamente {background: #ffae00; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px}
+#atualizando_dados a.tentarNovamente {background: #ffae00; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px; float: left;  margin-left: 155px; margin-top: 15px }
 #atualizando_dados a.tentarNovamente:hover {background: #d79303}
 
 #modelSucesso {background: #fff; width: 411px; margin: 0 auto; border: 4px solid #5b9000;  text-align: center; padding-bottom: 30px }
 #modelSucesso .atencaoErro {background:url(../images/parabens.png) no-repeat ; text-indent: -9999px; height:36px; width: 36px; margin-left: 185px}
+#modelSucesso p.erro {width: 250px; margin-left: 80px}
 #modelSucesso span.tipo_erro{ line-height: 25px; color:#000;}
-#modelSucesso a.tentarNovamente {background: #5b9000; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px}
+#modelSucesso a.tentarNovamente {background: #5b9000; border-radius: 7px; padding: 10px; text-transform: uppercase; color:#fff; font-size: 13px; letter-spacing: 1px; margin-top: -25px; margin-left: 155px;}
 #modelSucesso a.tentarNovamente:hover {background: #456d01}
 
 
@@ -762,14 +763,14 @@ span.ButtonNovoEndereco { color:#FFF; cursor: pointer; float:right; border: none
 span.ButtonNovoEndereco:hover { background: #E76509;}
 table#EditarEndereco { width: 988px; float: left; border-bottom: solid 1px #CCC; padding-top: 12px;}
 tr.BoxRadio { margin-bottom: 15px; float: left;}
-th.TextoEditarEnd { width: 500px; text-transform: uppercase; font-size: 13px; text-align: left; color: #666666; display: block; float: left;}
+th.TextoEditarEnd { width: 400px; font-size: 13px; text-align: left; color: #666666; display: block; float: left; margin-left: 13px; text-transform: uppercase; font-weight: normal; line-height: 20px}
 
-th.bt_excluirVasio { width: 32px; height: 32px; margin-left: 150px; display: block; float: left;}
-th.bt_excluirEditarEnd { width: 32px; height: 32px; margin-left: 150px; display: block; float: left; background: url(../images/bt_excluir.png) no-repeat; cursor: pointer;}
+th.bt_excluirVasio { width: 32px; height: 32px;  display: block; float: left;}
+th.bt_excluirEditarEnd { width: 32px; height: 32px; display: block; float: left; background: url(../images/bt_excluir.png) no-repeat; cursor: pointer;}
 th.bt_excluirEditarEnd:hover { background: url(../images/bt_excluirHover.png) no-repeat;}
 
 
-th.bt_editar { width: 32px; height: 32px; margin-left: 200px; display: block; float: left;}
+th.bt_editar { width: 32px; height: 32px;  display: block; float: left;}
 
 
 /*FIM DO ENDEREÇOS DE ENTREGA DO CLIENTE*/
