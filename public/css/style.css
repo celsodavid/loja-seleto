@@ -54,7 +54,7 @@ div.container a.brand {
 }
 
 /*******************HEADER - MENU***************/
-#header { width: 100%; min-width: 1024px; float: left; background: #582700;}
+#header { width: 100%; min-width: 1024px; float: left; background: #582700;position:fixed;z-index:999}
 #ContenTopoHeader { width: 1024px; margin: 0 auto;}
 #mn_topo{ width: 824px; float: left;}
 ul.mn_topo { padding: 25px 0; float: left; display: block; font-size: 12px; }
@@ -175,7 +175,7 @@ input.Eventlogin:hover ,input.Eventcadastrar:hover {background: #e57220;}
 /*******************CONTEUDO***************/
 #geral { width: 100%; min-width: 1024px; float: left; }
 /*******************MENU***************/
-#topo_menu { width: 100%; min-width: 1024px; border-bottom: solid 1px #CCC; float: left; padding-bottom: 30px; margin-bottom: 30px;}
+#topo_menu { width: 100%; min-width: 1024px; border-bottom: solid 1px #CCC; float: left; padding-bottom: 30px; margin-bottom: 30px;margin-top:71px;}
 #menu_central { width: 1024px; float: left; position: relative; left: 50%; margin-left: -512px;}
 h1.logo_seleto { width: 248px; height: 147px; margin: 43px 0 0 100px; float: left; background: url(../images/logo_seleto.png) no-repeat; cursor: pointer; }
 img.phone { width: 24px; height: 15px; float: left; padding-top: 15px; padding-right: 10px;} 

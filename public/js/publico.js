@@ -1,8 +1,19 @@
 $(function(){
 		//Ações para inserção carrinho de compras
+	/*
+	$(document).scroll(function() {
+			if($(this).scrollTop() >= 71)
+				{
+					$( "#header" ).animate({
+					    height: "30px"
+					  }, 100, function() {
+					    // Animation complete.
+					  });
+				}
+		});
+		*/
 	$(".ButtonCestaVazia").on("click", function(){	$("#box_compras").slideUp();
 	return false;
-		
 	});
 	
 		$(".actionAddCarrinho").on("click", function(){	
