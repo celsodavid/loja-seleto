@@ -54,8 +54,10 @@ class ProdutoProdutosRepository extends EntityRepository {
         $qb =  $this->createQueryBuilder('i');
         $qb->select('i');
         $qb->innerJoin('Produto\Entity\ProdutoSubcategoria', 's', 'WITH', 'i.produtosubcategoria = s.idsubcategoria');
+        $qb->innerJoin('Produto\Entity\PagamentoControleestoque', 'c', 'WITH', 'c.produtoproduto = i.idproduto');
         $qb->where("s.slugSubcategoria = :slugSub");
         $qb->andWhere("i.slugProduto != :slugProduto");
+        $qb->andWhere("c.quantidade > 0");
         $qb->setParameters(array("slugSub" => $this->slugSubcategoria, "slugProduto" => $this->slugProduto));
         $query = $qb->getQuery();
         $results = $query->getResult();

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
 	
 	$(".ButtonNovoEndereco").on("click",function(){
 		idCadastro = null;
@@ -202,6 +202,7 @@ $(document).ready(function(){
 						success: function(data) {
 							if(data != "")
 								{
+									$(".modelNotificacao").attr("id","atencao_erro");
 									$(".erro").html("Alguns campos abaixo estão em branco:");
 									$(".tipo_erro").html("");
 									$(".tentarNovamente").css("display","block");
@@ -339,6 +340,7 @@ $(document).ready(function(){
 			success: function(data) {
 				if(data != "")
 					{
+					$(".modelNotificacao").attr("id","atencao_erro");
 						$(".erro").html("Alguns campos abaixo estão em branco:");
 						$(".tipo_erro").html("");
 						$(".tentarNovamente").css("display","block");
@@ -591,8 +593,10 @@ $(document).ready(function(){
 										}
 										else
 										{
+											$(".modelNotificacao").attr("id","atencao_erro");
 											$(".erro").html("Detalhe(s) do(s) erro(s) encontrado(s).");
 											$(".tipo_erro").html(data);
+											$(".tentarNovamente").html("Tentar Novamente");
 											$("#form_erro").fadeIn();
 											//$(".return").html(data);
 										}
@@ -602,8 +606,10 @@ $(document).ready(function(){
 						}
 					else
 						{
+						$(".modelNotificacao").attr("id","atencao_erro");
 							$(".erro").html("Detalhe(s) do(s) erro(s) encontrado(s).");
 							$(".tipo_erro").html(data);
+							$(".tentarNovamente").html("Tentar Novamente");
 							$("#form_erro").fadeIn();
 							//$(".return").html(data);
 						}

@@ -182,11 +182,10 @@ $(function(){
 						{
 							$(element).parents("#quantidade_produto_categoria,#comprar_detalhe,.box_vejaTambem").find('.smsEstoque').html("Limite máximo do estoque!");
 							$(element).parents("#quantidade_produto_categoria,#comprar_detalhe,.box_vejaTambem").find('.smsEstoque').fadeIn("slow");
-							
+							$(".modelNotificacao").attr("id","atencao_erro");
 							$(".atencaoErro").html("Uma informação para você");
-							$(".erro").html("");
+							$(".erro").html("Nosso limite de estoque foi atingido.");
 							$(".tentarNovamente").html("Continuar");
-							$(".tipo_erro").html("Nosso limite de estoque foi atingido.");
 							$("#form_erro").fadeIn();
 							/*
 							$("#comprar_detalhe .smsEstoque").html("Limite maximo estoque!");
@@ -230,10 +229,11 @@ $(function(){
 				{
 					if(data == (parseInt(valor)))
 					{
+						$(".modelNotificacao").attr("id","atencao_erro");
 						$(".atencaoErro").html("Uma informação para você");
-						$(".erro").html("");
+						$(".erro").html("Nosso limite de estoque foi atingido.");
 						$(".tentarNovamente").html("Continuar");
-						$(".tipo_erro").html("Nosso limite de estoque foi atingido.");
+						
 						$("#form_erro").fadeIn();
 					}
 					else
@@ -318,10 +318,10 @@ $(function(){
 							//location.reload();
 						},
 						complete:function(){
+							$(".modelNotificacao").attr("id","modelSucesso");
 							$(".atencaoErro").html("Uma informação para você");
-							$(".erro").html("");
+							$(".erro").html("Produto adicionado com sucesso.");
 							$(".tentarNovamente").html("Continuar");
-							$(".tipo_erro").html("Produto adicionado com sucesso.");
 							$("#form_erro").fadeIn();
 							$(".tentarNovamente").on("click",function(){location.reload();});
 						},

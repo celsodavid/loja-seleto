@@ -165,7 +165,10 @@
     </div>
 
     <!--box mais produtos-->
-
+<?php 
+		if(count($this->produtosRelacionados) > 0)
+		{
+?>
 <div id="VejaTambem">
 
     <h2><span class="tt_top_list_right">Veja mais produtos</span></h2>	
@@ -222,6 +225,9 @@
 		
    </div>
 </div>
+<?php 
+		}
+?>
 <script src='<?=$this->basePath()?>/js/elevatezoom/jquery.elevatezoom.js'></script>
 <script type="text/javascript">
 
