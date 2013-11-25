@@ -15,4 +15,24 @@ $(document).ready(function(){
 						});
 		});
 	 }, 55000);
+	if(window.location.hash == "#pedido") 
+		{
+		$(".SeuPedido").attr("class","SeuPedidoActive");
+		$("#BoxDetalheDoPedido").css("display","block");
+		}
+	else if(window.location.hash == "#enderecos") 
+		{
+		$(".EndEntrega").attr("class","EndEntregaActive");
+		$("#BoxMeuEndereco").css("display","block");
+		}
+	else if(window.location.hash == "#meusDados") 
+		{
+		$(".MeusDados").attr("class","MeusDadosActive");
+		$("#BoxMeusDados").css("display","block");
+		}
+	else
+		{
+		$(".SeuPedido").attr("class","SeuPedidoActive");
+		$("#BoxDetalheDoPedido").css("display","block");
+		}
 })

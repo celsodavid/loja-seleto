@@ -93,6 +93,7 @@
 								$(".tentarNovamente").html("Continuar");
 								$("#form_erro").fadeIn();
 								$(".tentarNovamente").on("click",function(){
+									//window.location.href += "#enderecos";
 									location.reload();
 								})
 							}
@@ -443,24 +444,21 @@
 		$("#form_erro").fadeOut();
 		return false;
 	});
-	$(".MeusDados").on("click",function(){
+	$(".BoxMenuInstitucional").on("click",".MeusDados",function(){
 		$(this).attr("class","MeusDadosActive");
 		$(".EndEntregaActive").attr("class","EndEntrega");
 		$(".SeuPedidoActive").attr("class","SeuPedido");
 		$("#BoxDetalheDoPedido").slideUp();
 		$("#BoxMeuEndereco").slideUp();
 		$("#BoxMeusDados").slideDown();
-		return false;
 	});
-	$(".EndEntrega").on("click",function(){
+	$(".BoxMenuInstitucional").on("click",".EndEntrega",function(){
 		$(this).attr("class","EndEntregaActive");
 		$(".MeusDadosActive").attr("class","MeusDados");
 		$(".SeuPedidoActive").attr("class","SeuPedido");
 		$("#BoxDetalheDoPedido").slideUp();
 		$("#BoxMeusDados").slideUp();
 		$("#BoxMeuEndereco").slideDown();
-		
-		return false;
 	});
 	$(".BoxMenuInstitucional").on("click",".SeuPedido",function(){
 		$(this).attr("class","SeuPedidoActive");
@@ -469,7 +467,6 @@
 		$("#BoxMeusDados").slideUp();
 		$("#BoxMeuEndereco").slideUp();
 		$("#BoxDetalheDoPedido").slideDown();
-		return false;
 	});
 	
 	

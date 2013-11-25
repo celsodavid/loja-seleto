@@ -11,13 +11,13 @@
 			<div id="MenuDoUsuario">
 				<ul class="BoxMenuDoUsuario">
 					<li class="BoxMenuInstitucional">
-						<a href="" class="MeusDados" title="Meus Dados">Meus Dados</a>
+						<a href="#meusDados" class="MeusDados" title="Meus Dados">Meus Dados</a>
 					</li>
 					<li class="BoxMenuInstitucional">
-						<a href="" class="EndEntrega" title="Endereços de Entregas">Endereços de Entregas</a>
+						<a href="#enderecos" class="EndEntrega" title="Endereços de Entregas">Endereços de Entregas</a>
 					</li>
 					<li class="BoxMenuInstitucional">
-						<a href="" class="SeuPedidoActive" title="Seus Pedidos">Seus Pedidos</a>
+						<a href="#pedido" class="SeuPedido" title="Seus Pedidos">Seus Pedidos</a>
 					</li>
 				</ul>
 			</div>
@@ -216,7 +216,7 @@
 
 
 			<!--PEDIDOS-->
-				<div id="BoxDetalheDoPedido">
+				<div id="BoxDetalheDoPedido" style="display:none">
 				<?php 
 				    if(count($this->recibos) == 0)
 				    {
