@@ -127,7 +127,7 @@ class ProdutoController extends AbstractActionController
                     #echo "<pre>", print_r($error), "</pre>";        		    
         		} else {
         
-        			$diretorio = $request->getServer()->DOCUMENT_ROOT . '/seletoLoja/public/images/produtos/large';
+        			$diretorio = $request->getServer()->DOCUMENT_ROOT . '/loja/public/images/produtos/large';
         			$adpter->setDestination($diretorio);
         
         			$thumbnailer = $this->getServiceLocator()->get('WebinoImageThumb');
