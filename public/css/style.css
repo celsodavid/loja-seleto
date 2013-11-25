@@ -54,7 +54,7 @@ div.container a.brand {
 }
 
 /*******************HEADER - MENU***************/
-#header { width: 100%; min-width: 1024px; float: left; background: #582700;position:fixed;z-index:999}
+#header { width: 100%; min-width: 1024px; float: left; background: #582700;position:fixed;z-index:999;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#2C2C2C}
 #ContenTopoHeader { width: 1024px; margin: 0 auto;}
 #mn_topo{ width: 824px; float: left;}
 ul.mn_topo { padding: 25px 0; float: left; display: block; font-size: 12px; }
