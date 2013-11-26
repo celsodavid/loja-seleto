@@ -14,7 +14,7 @@
     <div class="span9">
         <?php 
         $form = $this->form;
-        $form->setAttribute('action', $this->url('admin-produto-home/admin-produto-gerenciar', array('action'=>'adicionar')));
+        $form->setAttribute('action', $this->url('admin-produto-home/admin-default', array('action'=>'adicionar')));
         $form->prepare();
         echo $this->form()->openTag($form);
         ?>

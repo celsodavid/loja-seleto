@@ -18,7 +18,7 @@
             <div class="thumbnail">
                 <img src="<?php echo $this->basepath()?>/images/produtos/large/<?php echo $produto->getFoto();?>" width="200" height="200" alt="Imagem do Produto <?php echo $produto->getTitulo();?>">
                 <div class="caption">
-                    <form action="<?php echo $this->url('admin-produto-home/admin-produto-gerenciar', array('action'=>'recortar'))?>" method="post" style="margin-bottom: 0px;margin-left: 20px;">
+                    <form action="<?php echo $this->url('admin-produto-home/admin-default', array('action'=>'recortar'))?>" method="post" style="margin-bottom: 0px;margin-left: 20px;">
                         <input type="hidden" name="idproduto" value="<?php echo $produto->getIdproduto();?>">
                         <input type="hidden" name="imagem" value="<?php echo $produto->getFoto()?>">
                         <button class="btn btn-info">
@@ -34,7 +34,7 @@
                     <div class="thumbnail">
                         <img src="<?php echo $this->basepath()?>/images/produtos/large/<?php echo $imagens->getImages();?>" width="200" height="200" alt="Imagem do Produto <?php echo $produto->getTitulo();?>">
                         <div class="caption">
-                            <form action="<?php echo $this->url('admin-produto-home/admin-produto-gerenciar', array('action'=>'recortar'))?>" method="post" style="margin-bottom: 0px;margin-left: 20px;">
+                            <form action="<?php echo $this->url('admin-produto-home/admin-default', array('action'=>'recortar'))?>" method="post" style="margin-bottom: 0px;margin-left: 20px;">
                                 <input type="hidden" name="idproduto" value="<?php echo $produto->getIdproduto();?>">
                                 <input type="hidden" name="idprodutoImagem" value="<?php echo $imagens->getIdprodutoImagens()?>">
                                 <input type="hidden" name="imagem" value="<?php echo $imagens->getImages()?>">
