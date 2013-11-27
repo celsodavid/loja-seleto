@@ -14,7 +14,7 @@
     <div class="span12">
        <img id="cropbox" alt="" src="<?php echo $this->basepath()?>/images/produtos/large/<?php echo $this->foto;?>" style="margin-left: 20px;">
        
-       <form action="<?php echo $this->url('admin-produto-home/admin-produto-gerenciar', array('action' => 'recortar'));?>" method="post">
+       <form action="<?php echo $this->url('admin-produto-home/admin-default', array('action' => 'recortar'));?>" method="post">
            <input type="hidden" name="imagem" value="<?php echo $this->foto;?>">
            <input type="hidden" name="idproduto" value="<?php echo $this->idproduto;?>">
            <?php if($this->idprodutoImagem): ?>

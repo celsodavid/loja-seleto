@@ -53,7 +53,7 @@ return array(
             				),
                 		),
                     ),                    
-                    'admin-produto-gerenciar' => array(
+                    /*'admin-produto-gerenciar' => array(
                 		'type'    => 'Segment',
                 		'options' => array(
             				'route'    => '/[:action]',
@@ -64,7 +64,7 @@ return array(
             				'defaults' => array(
             				),
                 		),                        
-                    ),
+                    ),*/
                     'admin-categorias-default' => array(
                         'type'    => 'Segment',
                     	'options' => array(
@@ -116,7 +116,7 @@ return array(
                             ),
                         ),
                     ),
-                    'admin-produto-nutricional' => array(
+                    /*'admin-produto-nutricional' => array(
                 		'type'    => 'Literal',
                 		'options' => array(
             				'route'    => '/nutricional',
@@ -151,7 +151,7 @@ return array(
                         		),
                             ),
                         ),
-                    ),
+                    ),*/
                 ),
             ),
             'admin-produto-categoria' => array(
